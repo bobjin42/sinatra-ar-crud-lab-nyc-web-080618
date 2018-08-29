@@ -1,0 +1,13 @@
+<h1>Welcome to the Posts Site </h1>
+
+<% @posts.each do |post| %>
+  <p>
+    <a href="/posts/<%= post.id %>">
+      <%= post.name %>
+    </a>
+  </p>
+<% end %>
+
+<a href="/posts/new">
+Click Here To Add new Post
+</a>

@@ -1,0 +1,18 @@
+<h1>
+  Details for <%= @post.name %>
+</h1>
+
+<p><%= @post.content %></p>
+
+
+<a href="/posts/<%= @post.id %>/edit">
+  <button>Edit <%= @post.name %></button>
+</a>
+
+<br>
+<br>
+<!-- I need to somehow send a delete request to /books/:id -->
+<form action="/posts/<%= @post.id %>/delete" method="post">
+  <input id = "hidden" type="hidden" name="_method" value="delete">
+  <button type="submit" id="submit">delete</button>
+</form>
